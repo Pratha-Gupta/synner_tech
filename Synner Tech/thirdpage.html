@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Testimonials</title>
+  <style>
+    .body {
+  font-family: Arial, sans-serif;
+  background-color: #f3a3cb;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.header p {
+  color: #6b7280;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* .card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease; /* Changed to all to animate both transform and shadow */
+  position: relative; /* Added for better shadow handling */
+  top: 0; /* Initial position */
+}
+
+.card:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Increased shadow */
+  transform: translateY(-10px); /* Makes card lift up slightly */
+  top: 0; /* Ensures smooth transition */
+}
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+.role {
+  color: grey;
+  font-size: 0.9rem;
+}
+  </style>
+ 
+</head>
+<body>
+  <section class="body">
+  <div class="container">
+    <div class="header">
+      <h2>Trusted by Thousands Worldwide</h2>
+      <p>Empowering individuals with essential financial literacy skills.</p>
+    </div>
+    <div class="grid" id="testimonialGrid">
+      <div class="card">
+        <h3>Sarah Johnson</h3>
+        <p class="role">Financial Analyst</p>
+        <p>This platform has revolutionized my understanding of financial management and investment strategies. Highly recommend!</p>
+      </div>
+      <div class="card">
+        <h3>James Lee</h3>
+        <p class="role">Entrepreneur</p>
+        <p>The financial literacy courses here helped me launch my business successfully. A must for any aspiring entrepreneur.</p>
+      </div>
+      <div class="card">
+        <h3>Emily Davis</h3>
+        <p class="role">College Student</p>
+        <p>I learned how to manage my student loans and save for the future. These skills are invaluable.</p>
+      </div>
+      <div class="card">
+        <h3>Michael Smith</h3>
+        <p class="role">Software Engineer</p>
+        <p>The insights I gained have improved my budgeting and investment decisions immensely. Fantastic resource!</p>
+      </div>
+      <div class="card">
+        <h3>Aisha Khan</h3>
+        <p class="role">Marketing Specialist</p>
+        <p>Understanding personal finance has never been easier. The lessons are clear and practical.</p>
+      </div>
+      <div class="card">
+        <h3>Carlos Martinez</h3>
+        <p class="role">Freelance Writer</p>
+        <p>The platform's user-friendly approach made learning about finances straightforward and enjoyable.</p>
+      </div>
+      <div class="card">
+        <h3>Olivia Brown</h3>
+        <p class="role">Teacher</p>
+        <p>I now feel confident teaching financial literacy to my students. This is an exceptional educational tool.</p>
+      </div>
+      <div class="card">
+        <h3>David Green</h3>
+        <p class="role">Retiree</p>
+        <p>I wish I had this resource earlier. It has significantly improved my retirement planning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
